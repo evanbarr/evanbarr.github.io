@@ -9,7 +9,15 @@
     body {
       background: #ececec;
     }
-    
+    a {
+      transition: .3s color;
+      color: #3b6caa;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration:underline
+    }
+
     .main-header {
       background: url(Cropped.jpg) center / cover no-repeat;
       height: 400px;
@@ -23,7 +31,8 @@
     }
     
     .main-body {
-      margin-left: 80px;
+      margin-left: 70px;
+      margin-right: 70px;
       margin-top: 50px;
     }
     .section-header {
@@ -43,14 +52,27 @@
     }
     .project-card {
       background-color: #fff;
-      height: 160px;
-      display: inline-block;
+      //height: 180px;
+      //display: inline-block;
+      padding-top: 1px;  //Remove when adding back--> height: 180px; display: inline-block;
       margin: 5px 2px 5px 5px;
     }
     .card-text {
       overflow: hidden;
       font-family: Helvetica, Arial, sans-serif !important;
       margin: 15px;
+    }
+    .card-text h4 {
+      margin: 0px;
+      color: #00649c;
+      font-size: 1.25em;
+      font-weight: 200;
+    }
+    .card-text h5 {
+      margin-top: 5px;
+      color: #00b1ef;
+      font-size: 1em;
+      font-weight: 100;
     }
   </style>
 </head>
@@ -69,9 +91,35 @@
       <div class="card-text">
         <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
           <h4>Corner Labels for Tables</h4>
-          <h5>Excel Add-in</h5>
         </a>
+        <h5>Excel Add-in</h5>
+        
         Adds the ability to split a cell along the diagonal in order to show labels for both the column header and row header.
+        <br/><br/>
+        - <a href="https://github.com/evanbarr/Excel-TableCornerLabels/releases/download/v1.0/Excel-TableCornerLabels.zip">
+          Download latest release
+        </a><br/>
+        - <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
+          Instructions and source code
+        </a><br/>&nbsp;
+      </div>
+    </div>
+    
+    <div class="project-card">
+      <div class="card-text">
+        <a href="">
+          <h4></h4>
+        </a>
+        <h5></h5>
+        
+        
+        <br/><br/>
+        <a href="">
+          
+        </a><br/>
+        <a href="">
+          
+        </a><br/>&nbsp;
       </div>
     </div>
 
