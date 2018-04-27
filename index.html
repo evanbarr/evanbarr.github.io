@@ -9,8 +9,25 @@
     body {
       background: #ececec;
     }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #wrapper {
+      min-height: -webkit-calc(100% - 350px);     /* Chrome */
+      min-height: -moz-calc(100% - 350px);     /* Firefox */
+      min-height: calc(100% - 350px);     /* native */
+    }
+    footer {
+      //bottom: 0;
+      //position: fixed;
+      margin-left: 70px;
+      //height: 60px;
+    }
+
     a {
-      transition: .3s color;
+      //transition: .3s color;
       color: #3b6caa;
       text-decoration: none;
     }
@@ -20,7 +37,8 @@
 
     .main-header {
       background: url(Cropped.jpg) center / cover no-repeat;
-      height: 400px;
+      //height: 400px;
+      height: 180px;
     }
     .txt_page-title {
       padding: 60px;
@@ -82,7 +100,7 @@
     <h1 class="txt_wh_outline txt_page-title">Evan Barr at Github</h1>
   </div>
   
-  <div class="main-body">
+  <div id="wrapper" class="main-body">
     <div class="section-header">
       <span class="title">projects</span>
     </div>
@@ -127,8 +145,9 @@
   
   <footer>
     <div class="container">
-      <a href="https://www.linkedin.com/in/evanbarr/">Profile</a> on LinkedIn
-      My <a href="https://evansblog.thebarrs.info">Blog</a>
+      - <a href="https://www.linkedin.com/in/evanbarr/">Profile</a> on LinkedIn<br/>
+      - My <a href="https://evansblog.thebarrs.info">Blog</a>
+      <br/>&nbsp;
     </div>
   </footer>
 
