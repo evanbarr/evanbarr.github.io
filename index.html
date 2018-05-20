@@ -137,9 +137,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       flex: 1;
       min-width: 260px;
     }
-    .float-left {
-      /* float: left !important; (use flex instead) */
-    }
     .section-header {
       background-color: #333;
       text-transform: uppercase;
@@ -179,7 +176,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: 1em;
       font-weight: 100;
     }
-  </style>
+
+    .SideAdbar {
+      position: absolute;
+      top: 600px;
+      left: 16px;
+      height: 100px;
+      width: 240px;
+    }
+    @media (max-width: 555px) {
+        .SideAdbar {
+            position: relative;
+            top: 0px;
+        }
+        #wrapper {
+          min-height: 100px;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -194,7 +208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div id="wrapper" class="main-body">
     
     
-    <div class="Sidebar float-left" itemscope="" itemtype="http://schema.org/Person">
+    <div class="Sidebar" itemscope="" itemtype="http://schema.org/Person">
 
     <a itemprop="image" class="photo" aria-hidden="true" href="https://avatars3.githubusercontent.com/u/38681084?s=400&amp;v=4"><img class="avatar" src="https://avatars2.githubusercontent.com/u/38681084?s=460&amp;v=4" width="230" height="230" alt=""></a>
 
@@ -251,16 +265,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </a><br/>&nbsp;
         </div>
       </div>
-    </div>
+    </div>  <!--END: ColumnWide-->
 
-  </div>
+    <span class="SideAdbar">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- OnGithub -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-0549784498739741"
+           data-ad-slot="4541961653"
+           data-ad-format="auto"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </span>
+
+  
+  </div>  <!--END: wrapper/main-body-->
+  
   
   <footer>
-    <div class="container">
-      - <a href="https://www.linkedin.com/in/evanbarr/">Profile</a> on LinkedIn<br/>
-      - My <a href="https://evansblog.thebarrs.info">Blog</a>
-      <br/>&nbsp;
-    </div>
   </footer>
 
   </body>
