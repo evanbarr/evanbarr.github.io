@@ -32,14 +32,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       min-height: calc(100% - 310px);     /* native */
     }
     footer {
-      //bottom: 0;
-      //position: fixed;
+      /* bottom: 0; */
+      /* position: fixed; */
       margin-left: 70px;
-      //height: 60px;
+      /* height: 60px; */
     }
 
     a {
-      //transition: .3s color;
+      /* transition: .3s color; */
       color: #3b6caa;
       text-decoration: none;
     }
@@ -49,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .main-header {
       background: url(Cropped.jpg) center / cover no-repeat;
-      //height: 400px;
+      /* height: 400px; */
       height: 180px;
     }
     .txt_page-title {
@@ -61,9 +61,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     
     .main-body {
-      margin-left: 70px;
-      margin-right: 70px;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 50px;
+      padding-left: 16px;
+      padding-right: 16px;
+      max-width: 1400px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .Sidebar {
+      padding-right: 16px !important;
+      display: block;
+      /* width: 260px; (use flex instead) */
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 240px;
+    }
+    .Photo {
+      display: block !important;
+      position: relative !important;
+      width: 245px;
+    }
+    .avatar {
+      display: inline-block;
+      overflow: hidden;
+      line-height: 1;
+      vertical-align: middle;
+      border-radius: 6px; !important;
+      width: 100% !important;
+    }
+    .vcard-details {
+      list-style: none;
+      padding-top: 16px !important;
+      padding-bottom: 16px !important;
+      padding-left: 0px;
+      border-top: 1px #e1e4e8 solid !important;
+      border-color: #eaecef !important;
+    }
+    .vcard-detail {
+      width: 100%;
+      max-width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+      padding-left: 22px;
+      /* padding-top: 4px !important; */
+      height: 30px;
+      font-size: 14px;
+      text-align: -webkit-match-parent;
+    }
+    .octicon-link {
+        float: left;
+        width: 16px;
+        /* margin-top: 3px; */
+        margin-left: -22px;
+        color: #6a737d;
+        text-align: center;
+        vertical-align: text-bottom;
+        display: inline-block;
+        fill: currentColor;
+    }
+    svg:not(:root) {
+        overflow: hidden;
+    }
+    
+    .ColumnWide {
+      padding-left: 8px; !important;
+      /* width: 75%; */
+      display: block;
+      /* margin-left: 260px; (use flex instead) */
+      flex: 1;
+      min-width: 260px;
+    }
+    .float-left {
+      /* float: left !important; (use flex instead) */
     }
     .section-header {
       background-color: #333;
@@ -82,8 +157,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .project-card {
       background-color: #fff;
-      //height: 180px;
-      //display: inline-block;
+      /* height: 180px; */
+      /* display: inline-block; */
       padding-top: 1px;  /* Remove when adding back--> height: 180px; display: inline-block; */
       margin: 5px 2px 5px 5px;
     }
@@ -117,43 +192,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
   
   <div id="wrapper" class="main-body">
-    <div class="section-header">
-      <span class="title">projects</span>
-    </div>
     
-    <div class="project-card">
-      <div class="card-text">
-        <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
-          <h4>Corner Labels for Tables</h4>
-        </a>
-        <h5>Excel Add-in</h5>
-        
-        Adds the ability to split a cell along the diagonal in order to show labels for both the column header and row header.
-        <br/><br/>
-        - <a href="https://github.com/evanbarr/Excel-TableCornerLabels/releases/download/v1.0/Excel-TableCornerLabels.zip">
-          Download latest release
-        </a><br/>
-        - <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
-          Instructions and source code
-        </a><br/>&nbsp;
+    
+    <div class="Sidebar float-left" itemscope="" itemtype="http://schema.org/Person">
+
+    <a itemprop="image" class="photo" aria-hidden="true" href="https://avatars3.githubusercontent.com/u/38681084?s=400&amp;v=4"><img class="avatar" src="https://avatars2.githubusercontent.com/u/38681084?s=460&amp;v=4" width="230" height="230" alt=""></a>
+
+    <ul class="vcard-details">
+      <li itemprop="url" aria-label="Blog or website" class="vcard-detail"><svg class="octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+        <a rel="nofollow me" href="https://www.linkedin.com/in/evanbarr/">Profile</a> on LinkedIn
+      </li>
+      <li itemprop="url" aria-label="Blog or website" class="vcard-detail"><svg class="octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>
+        My <a rel="nofollow me" href="https://evansblog.thebarrs.info">Blog</a>
+      </li>
+    </ul>
+
+    </div>
+
+    
+    <div class="ColumnWide">
+
+      <div class="section-header">
+        <span class="title">projects</span>
       </div>
-    </div>
     
-    <div class="project-card">
-      <div class="card-text">
-        <a href="">
-          <h4></h4>
-        </a>
-        <h5></h5>
+      <div class="project-card">
+        <div class="card-text">
+          <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
+            <h4>Corner Labels for Tables</h4>
+          </a>
+          <h5>Excel Add-in</h5>
+        
+          Adds the ability to split a cell along the diagonal in order to show labels for both the column header and row header.
+          <br/><br/>
+          - <a href="https://github.com/evanbarr/Excel-TableCornerLabels/releases/download/v1.0/Excel-TableCornerLabels.zip">
+            Download latest release
+          </a><br/>
+          - <a href="https://github.com/evanbarr/Excel-TableCornerLabels">
+            Instructions and source code
+          </a><br/>&nbsp;
+        </div>
+      </div>
+    
+      <div class="project-card">
+        <div class="card-text">
+          <a href="">
+            <h4></h4>
+          </a>
+          <h5></h5>
         
         
-        <br/><br/>
-        <a href="">
+          <br/><br/>
+          <a href="">
           
-        </a><br/>
-        <a href="">
+          </a><br/>
+          <a href="">
           
-        </a><br/>&nbsp;
+          </a><br/>&nbsp;
+        </div>
       </div>
     </div>
 
