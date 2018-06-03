@@ -282,7 +282,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>  <!--END: ColumnWide-->
 
     <span class="SideAdbar">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="document.getElementById('isblocked').innerText='If you use an adBlocker, please consider whitelisting this site.  This is my only ad.'"></script>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="HasAdblocker"></script>
       <!-- OnEBGithub -->
       <ins class="adsbygoogle"
            style="display:block"
@@ -290,7 +290,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            data-ad-slot="7372507658"
            data-ad-format="auto"></ins>
       <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        function HasAdblocker() {
+          document.getElementById('isblocked').innerText='If you use an adBlocker, please consider whitelisting this site.  This is my only ad.';
+
+          if (typeof ga !== 'undefined') {
+            // Log an event in Universal Analytics but without affecting overall bounce rate
+            ga('send', 'event', 'Adblock', 'Yes', {'nonInteraction': 1}); 
+          } else if (typeof _gaq !== 'undefined') {
+            // Log a non-interactive event in old Google Analytics
+            _gaq.push(['_trackEvent', 'Adblock', 'Yes', undefined, undefined, true]);
+          }
+        }
       </script>
       <span id="isblocked"></span>
     </span>
